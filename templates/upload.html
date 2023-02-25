@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload MP3 with Metadata</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+         
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);    
+        
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        
+        }
+        
+        ul a:hover{
+          background-color:red;
+          color: white;
+          opacity:0.8;
+          box-shadow: 1px 2px 2px white;
+        }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li style="margin-left:60px;"> <a href="/" >Home</a></li>
+        <li style="float: right;margin-left: 80px;"> <a href="/upload" >upload</a></li>
+        <li style="float:right"><a href="/view" >view</a></li>
+        <li style="float: right;margin-left: 80px;"> <a href="/searchs" >search</a></li>
+     </ul>
+    <h1>Upload MP3 with Metadata</h1>
+    <form action="/data" method="post" enctype="multipart/form-data">
+      <label for="mp3file">Select MP3 file:</label>
+      <input type="file" name="mp3file" id="mp3file"><br><br>
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title"><br><br>
+      <label for="artist">Artist:</label>
+      <input type="text" name="artist" id="artist"><br><br>
+      <label for="album">Album:</label>
+      <input type="text" name="album" id="album"><br><br>
+      <input type="submit" value="Upload">
+    </form>
+    <p>{m}</p>
+  </body>
+</html>
+
+<!--
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload MP3 file</title>
+</head>
+<body>
+    <h1>Upload MP3 file</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title() }}
+        </p>
+        <p>
+            {{ form.artist.label }}<br>
+            {{ form.artist() }}
+        </p>
+        <p>
+            {{ form.album.label }}<br>
+            {{ form.album() }}
+        </p>
+        <p>
+            {{ form.mp3_file.label }}<br>
+            {{ form.mp3_file() }}
+        </p>
+        <p>
+            <input type="submit" value="Upload">
+        </p>
+    </form>
+</body>
+</html>
+
+
+-->
